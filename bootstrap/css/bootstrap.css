@@ -12,6 +12,7 @@ html {
 }
 body {
   margin: 0;
+  background: url(../images/glenbrook/background.png);
 }
 article,
 aside,
@@ -736,6 +737,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 75px; 
 }
 @media (min-width: 768px) {
   .container {
