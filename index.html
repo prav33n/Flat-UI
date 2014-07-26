@@ -28,12 +28,41 @@
 
         }
       }
+
+      function switchLanguage (_language) {
+        console.log(_language);
+        switch (_language) {
+          case 'en' :
+            location.href='index.html';
+            break;
+          case 'cn':
+            location.href='indexcn.html';
+            break;
+          case 'kr' :
+            location.href='indexkr.html';
+            break;
+          case 'jp' :
+            location.href='indexjp.html';
+            break;
+          case 'tw' :
+            location.href='indextw.html';
+            break;
+        }
+      }
+
     </script>
   </head>
   <body onload="setWindowHeight()">
     <div id = 'header' class= 'headerContainer'>
         <div id='logoHolder' class= 'logoHolderHeader'>
           <a href='' class='logoText'><h2>GLENBROOK</h2></a>
+        </div>
+        <div id= 'flagsContainer' class = 'flagsContainer btn-group'>
+          <button type="button" class="btn btn-default english" onClick="switchLanguage('en')"></button>
+          <button type="button" class="btn btn-default chinese" onClick="switchLanguage('cn')"></button>
+          <button type="button" class="btn btn-default japanese" onClick="switchLanguage('jp')"></button>
+          <button type="button" class="btn btn-default korean" onClick="switchLanguage('kr')"></button>
+          <button type="button" class="btn btn-default taiwanese"onClick="switchLanguage('tw')"></button>
         </div>
         <div class='navbar navbar-fixed-top navbar-inverse navbar-embossed' id='menucontainer' role="navigation">
             <ul class="nav navbar-nav navbar-left btn-group">           

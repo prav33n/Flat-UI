@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Glenbrook</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      function setWindowHeight(){
+        var IS_MOBILE_SAFARI = !!navigator.userAgent.match(/i(Pad|Phone|Pod)/i) || navigator.userAgent.match(/i(Android)/i);
+        if(IS_MOBILE_SAFARI) {
+          var windowHeight = window.innerHeight;
+          document.body.style.height = windowHeight + "px";
+          $( ".contentWrapper" ).css( "height", windowHeight + "px" );
+
+        }
+      }
+
+      function switchLanguage (_language) {
+        console.log(_language);
+        switch (_language) {
+          case 'en' :
+            location.href='index.html';
+            break;
+          case 'cn':
+            location.href='indexcn.html';
+            break;
+          case 'kr' :
+            location.href='indexkr.html';
+            break;
+          case 'jp' :
+            location.href='indexjp.html';
+            break;
+          case 'tw' :
+            location.href='indextw.html';
+            break;
+        }
+      }
+
+    </script>
+  </head>
+  <body onload="setWindowHeight()">
+    <div id = 'header' class= 'headerContainer'>
+        <div id='logoHolder' class= 'logoHolderHeader'>
+          <a href='' class='logoText'><h2>GLENBROOK</h2></a>
+        </div>
+        <div id= 'flagsContainer' class = 'flagsContainer btn-group'>
+          <button type="button" class="btn btn-default english" onClick="switchLanguage('en')"></button>
+          <button type="button" class="btn btn-default chinese" onClick="switchLanguage('cn')"></button>
+          <button type="button" class="btn btn-default japanese" onClick="switchLanguage('jp')"></button>
+          <button type="button" class="btn btn-default korean" onClick="switchLanguage('kr')"></button>
+          <button type="button" class="btn btn-default taiwanese"onClick="switchLanguage('tw')"></button>
+        </div>
+        <div class='navbar navbar-fixed-top navbar-inverse navbar-embossed' id='menucontainer' role="navigation">
+            <ul class="nav navbar-nav navbar-left btn-group">           
+            <li class= "active logoHolderLi"><a href="" class='logoHolder'></a></li>
+            <li><a href="#contact">联系我们</a></li>
+            <li class="dropdown">
+              <a href="#dataservices" class="dropdown-toggle" data-toggle="dropdown">Glenbrook 数据服务<b class="caret"></b></a>
+              <span class="dropdown-arrow"></span>
+              <ul class="dropdown-menu">
+                <li><a href="#langaugeconversion">多语言转换的商业记录</a></li>
+                <li class="divider"></li>
+                <li><a href="#business">收集全球商业信息</a></li>
+                <li class="divider"></li>
+                <li><a href="#poi">兴趣点</a></li>
+                <li class="divider"></li>
+              </ul>
+            </li>
+            <li><a href="#usecases">用户使用案例</a></li>
+            <li><a href="#platforms">Glenbrook 平台</a></li>
+            <li><a href="#about">关于我们</a></li>
+           </ul>
+        </div>
+    </div>
+
+    <div id= 'contentWrapper' class= 'contentWrapper'> 
+        <div class="contentContainer">
+            <div id="about" class = 'contentPage'>
+                <div  class = "contentHolder" >
+                    <p>自Glenbrook成立十年以来，公司专注于在Glenbrook专有的平台上为我们的客户提供先进的数据服务。Glenbrook的平台以网页的深入浏览，网页分析，从中提取他们的背景为基础功能，并将这些非结构化的信息转化，提取出背景中的结构化因素，并将这些添加到Glenbrook 客户“大数据战略举措”中。自Glenbrook成立十年以来，公司专注于在Glenbrook专有的平台上为我们的客户提供先进的数据服务。Glenbrook的平台以网页的深入浏览，网页分析，从中提取他们的背景为基础功能，并将这些非结构化的信息转化，提取出背景中的结构化因素，并将这些添加到Glenbrook 客户“大数据战略举措”中。</p>
+                    <p>使用该方式让Glenbrook为其客户在金融服务，信息技术，人力资源，电信，风险管理，出版和社会媒体等方面提供了成功的服务。</p>
+                </div>
+          </div>
+          <div id='platforms' class = 'contentPage'>
+            <div  class = "contentHolder" >
+                <ul class="media-list">
+                    <p>Glenbrook专有的技术已经获得了6项专利，还有一些在审理的过程中。该平台具有处理多种语言及多字节字符的能力。</p>
+                    <p>Glenbrook平台在浏览互联网和收集信息的功能由下列层组成：</p>
+                  <li class="media">
+                    <h6 class="media-heading">深网查阅</h6>
+                      <ul>
+                        <li>以高效的方式渗透到深网 </li>
+                        <li>自动收集位于深网中HTML格式后的信息 </li>
+                        <li>娴熟的处理网站和网页千变万化的结构</li>
+                      </ul>
+                  </li>
+                  <li class="media">
+                    <h6 class="media-heading">页分析- 上下文的识别和提取</h6>
+                    <ul>
+                        <li>识别目标内容中的“非内容”（不需要的广告，链接，散杂的内容等）</li>
+                        <li>自动提取目标内容（新闻文章，标题，作者等）</li>
+                        <li>娴熟的处理网页千变万化的结构。</li>
+                    </ul>
+                  </li>
+                  <li class="media">
+                    <h6 class="media-heading">转化非结构化网页信息到结构化数据</h6>
+                      <ul>
+                        <li>提取目标数据</li>
+                        <li>实体，它们的属性及关系的提取。</li>
+                        <li>转化目标数据到结构化的数据库格式</li>
+                      </ul>
+                  </li>
+                   <li class="media">
+                    <h6 class="media-heading">深网及表网</h6>
+                      <ul>
+                        <li>表网是由静态网页组成，是搜索引擎所进行搜索的（如谷歌）。它具有500亿网页的大小。</li>
+                        <li>深网则要大的多（超过1兆网页）并且是网页上动态的部分。这些网页是通过对用户查询的响应而创建的（例如:7月20日从芝加哥到纽瓦克的机票价格是多少？）而且它的趋势是把不断增加的信息量放置在深网上。  </li>  
+                        <li>Glenbrook的平台知道什么时候应该去深网（什么时候不应该去），如何为一个给定的网页构造查询，并且，一旦出现，如何找到并有效的提取所需要的信息。这是基于巨大规模和复杂性的深网相对于表网所必不可少的。</li>
+                      </ul>
+                  </li>
+                </ul>
+            </div>
+          </div>
+
+          <div id = 'usecases' class = 'contentPage'>
+            <div  class = "contentHolder" >
+                <ul>
+                    <li>直接从他们的网站上收集数以亿计的北美地区的公司。</li>
+                    <li>从英语到汉语，日语和韩语的客户记录转换 （反之亦然）</li>
+                    <li>收集全球移动应用的“兴趣点”</li>
+                    <li>收集来自世界各地的监管机构的商业信息</li>
+                    <li>在只有公司名称和状态已知的情况下，确定数以亿计的公司网址。</li>
+                    <li>基于公司的网址，确认公司的名称及所属国</li>
+                    <li>收集加盟商的商业信息</li>
+                    <li>直接从雇主的深网中收集招聘信息</li>
+                    <li>全球新闻文章无模板自动提取</li>
+                    <li>自动提取网页背景</li>
+                    <li>从新闻发布中提取商业信息</li>
+                </ul>
+            </div>
+          </div>
+
+          <div class = 'contentPage'>
+            <div  class = "contentHolder" >
+                <h6>无论是世界百强公司还是初创企业，Glenbrook都一样非常自豪的为它的客户们提供量身定做的数据服务。主要的服务种类说明如下。</h6>
+                <div id='langaugeconversion' class = 'contentPageInner'>
+                    <h5>多语言转换的商业记录</h5>
+                    <p>全球公司每天都在应对维护现有客户和潜在客户记录的基本问题。这些记录无论是从第三方公司获取（如D&B）或者是由本公司销售和市场部门生成。但要利用这些记录所面临的挑战是他们通常使用不同的语言而且他们与公司间的协调也不是一件简单的事。这不仅仅是语言的不同，同时在不同的语言中描述客户数据的方式也是不同的。例如，在汉语中地址组成的顺序与以英语为母语的国家的使用顺序是相反的。</p>
+                    <p>Glenbrook已经开发了一种特殊的方式来帮助缓解这一问题。这种方式是基于邮政惯例和公司信息所在互联网的目标国的记录分析，多重翻译技巧以及实际验证的综合。</p>
+                </div>
+                <div id='business' class = 'contentPageInner' >
+                    <h5>收集全球商业信息</h5>
+                    <p>企业总是对他们的现有和潜在客户最精确的最新的信息最为关心。互联网成了这一信息最重要的来源之一。公司的网页是这一信息的最佳来源。但只有2%左右的商业信息是出现在他们的网站上— 98%左右的可用信息是在互联网的其他地方被找到的（如新闻稿，文章，博客，等）。此外，所感兴趣的网页只有一小部分在表网（这部分是可以通过搜索引擎来访问的）；其他的内容则位于深网。并且， 所需要的信息很少被呈现在结构化格式的网页上，这使得一切更加的困难（在大多数的情况下，它显示为自由形式的文本）。Glenbrook的平台是最适合收集关于企业的真实信息并具有浏览深网，分析网页，从中提取独立的背景，转换从半结构化和非结构化信息到可以被存入到数据库中的结构化信息。</p>
+                </div>
+                <div id='poi' class = 'contentPageInner'>
+                    <h5>兴趣点</h5>
+                    <p>随着基于地理位置的移动应用程序越来越受欢迎，越来越多的公司正在寻找能够为其用户提供本地企业，具有吸引力的地方等，详细和全面的信息。互联网是这些兴趣点（POI）丰富信息资源的来源。Glenbrook利用其从互联网上搜索和汇总信息的能力来搜集及更新POI信息。</p>
+                </div>
+            </div>
+          </div>
+          <div class = 'contentPage'></div>
+          <div id='contact' class = 'contentPage'>
+            <div  class = "contentHolder" >
+                <p>如果您有任何关于Glenbrook数据服务的问题，请给我们发邮件<br>
+                <a class = "contactAddress" href="mailto:sales@glenbrooknet.com" target="_top">
+                sales@glenbrooknet.com</a></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <!-- /.container -->
+
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+  </body>
+</html>

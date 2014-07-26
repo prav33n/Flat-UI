@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Glenbrook</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      function setWindowHeight(){
+        var IS_MOBILE_SAFARI = !!navigator.userAgent.match(/i(Pad|Phone|Pod)/i) || navigator.userAgent.match(/i(Android)/i);
+        if(IS_MOBILE_SAFARI) {
+          var windowHeight = window.innerHeight;
+          document.body.style.height = windowHeight + "px";
+          $( ".contentWrapper" ).css( "height", windowHeight + "px" );
+
+        }
+      }
+
+      function switchLanguage (_language) {
+        console.log(_language);
+        switch (_language) {
+          case 'en' :
+            location.href='index.html';
+            break;
+          case 'cn':
+            location.href='indexcn.html';
+            break;
+          case 'kr' :
+            location.href='indexkr.html';
+            break;
+          case 'jp' :
+            location.href='indexjp.html';
+            break;
+          case 'tw' :
+            location.href='indextw.html';
+            break;
+        }
+      }
+
+    </script>
+  </head>
+  <body onload="setWindowHeight()">
+    <div id = 'header' class= 'headerContainer'>
+        <div id='logoHolder' class= 'logoHolderHeader'>
+          <a href='' class='logoText'><h2>GLENBROOK</h2></a>
+        </div>
+        <div id= 'flagsContainer' class = 'flagsContainer btn-group'>
+          <button type="button" class="btn btn-default english" onClick="switchLanguage('en')"></button>
+          <button type="button" class="btn btn-default chinese" onClick="switchLanguage('cn')"></button>
+          <button type="button" class="btn btn-default japanese" onClick="switchLanguage('jp')"></button>
+          <button type="button" class="btn btn-default korean" onClick="switchLanguage('kr')"></button>
+          <button type="button" class="btn btn-default taiwanese"onClick="switchLanguage('tw')"></button>
+        </div>
+        <div class='navbar navbar-fixed-top navbar-inverse navbar-embossed' id='menucontainer' role="navigation">
+            <ul class="nav navbar-nav navbar-left btn-group">           
+            <li class= "active logoHolderLi"><a href="" class='logoHolder'></a></li>
+            <li><a href="#contact">聯絡我們</a></li>
+            <li class="dropdown">
+              <a href="#dataservices" class="dropdown-toggle" data-toggle="dropdown">Glenbrook資料服務<b class="caret"></b></a>
+              <span class="dropdown-arrow"></span>
+              <ul class="dropdown-menu">
+                <li><a href="#langaugeconversion">多語言轉譯商業紀錄</a></li>
+                <li class="divider"></li>
+                <li><a href="#business">蒐集全球商業資訊</a></li>
+                <li class="divider"></li>
+                <li><a href="#poi">興趣點</a></li>
+                <li class="divider"></li>
+              </ul>
+            </li>
+            <li><a href="#usecases">顧客案例</a></li>
+            <li><a href="#platforms">Glenbrook 平台</a></li>
+            <li><a href="#about">關於我們</a></li>
+           </ul>
+        </div>
+    </div>
+
+    <div id= 'contentWrapper' class= 'contentWrapper'> 
+        <div class="contentContainer">
+            <div id="about" class = 'contentPage'>
+                <div  class = "contentHolder" >
+                    <p>成立十年來，Glenbrook 公司始終致力以其專利平台，提供顧客先進的資訊服務。Glenbrook平台提供基礎，使我們有能力進入暗網(Deep Web)，分析網頁並擷取資訊，接著將其中的非結構性資料，轉化為可貢獻顧客「大資料(Big Data)」策略方針的結構性資訊。</p>
+                    <p>由此出發，Glenbrook 成功服務了囊括金融、資訊科技、人力資源、行動業務、風險管理、出版、社群媒體等各領域顧客。</p>
+                </div>
+          </div>
+          <div id='platforms' class = 'contentPage'>
+            <div  class = "contentHolder" >
+                <ul class="media-list">
+                    <p>Glenbrook 獨有的科技已擁有六項專利認證，並有多項待審。平台亦支援多種語言與多元字彙。</p>
+                    <p>Glenbrook 平台用以導覽網路並收集資訊，由下面幾個層面組成：</p>
+                  <li class="media">
+                    <h6 class="media-heading">暗網搜尋</h6>
+                      <ul>
+                        <li>高效率通行於暗網 </li>
+                        <li>自動蒐集隱藏於暗網HTML表單中的資訊 </li>
+                        <li>因應日益變化的網站與網頁結構，進行調整</li>
+                      </ul>
+                  </li>
+                  <li class="media">
+                    <h6 class="media-heading">網頁分析 – 結構辨識與擷取</h6>
+                    <ul>
+                        <li>辨別目標內容與「非內容」（不相關廣告、連結、偽內容等）</li>
+                        <li>自動擷取目標內容（新聞內文、標題、作者等）</li>
+                        <li>因應日益變化的網頁結構，進行調整</li>
+                    </ul>
+                  </li>
+                  <li class="media">
+                    <h6 class="media-heading">將非結構性資料轉化為結構性資訊</h6>
+                      <ul>
+                        <li>擷取目標資料</li>
+                        <li>擷取實體內容、它們的附屬資訊，與兩者之間相關性 </li>
+                        <li>Conversion of target data into structured database format </li>
+                      </ul>
+                  </li>
+                   <li class="media">
+                    <h6 class="media-heading">暗網與表層網路</h6>
+                      <ul>
+                        <li>表層網路由可供搜尋引擎（如Google）搜尋的靜態網頁組成，大小約有500多億網頁。</li>
+                        <li>暗網則大得多—¬¬—超過一兆個網頁，並構成網路中的動態部分。這些網頁在回應使用者的查詢時產生（如 ：「七月二十日由芝加哥飛紐華克的機票多少錢？」）因此，不斷有新的資訊被放到暗網中。</li>  
+                        <li>Glenbrook的平台知道何時該¬¬（以及不該）進入暗網、如何查詢以獲得特定網頁，以及一旦進入後，如何有效率地找到並擷取想要的資訊。由於暗網相較於表層網路，內容龐大且複雜度高，這種效率至關重要。</li>
+                      </ul>
+                  </li>
+                </ul>
+            </div>
+          </div>
+
+          <div id = 'usecases' class = 'contentPage'>
+            <div  class = "contentHolder" >
+                <ul>
+                    <li>由數百萬北美公司企業的網站直接蒐集相關資訊</li>
+                    <li>將客戶紀錄由英文轉譯為中文、日文、韓文（反之亦然）</li>
+                    <li>為手機應用程式蒐集全球的「興趣點(Points of Interest)」</li>
+                    <li>自全球的監管機構蒐集商業資訊</li>
+                    <li>以公司名稱與所在地區，找出數百萬筆企業網址</li>
+                    <li>以公司網址，找出公司名稱與所在國家</li>
+                    <li>蒐集有關加盟分店的商業資訊</li>
+                    <li>直接由暗網內的雇主網站，蒐集徵才訊息</li>
+                    <li>不須範本，自動擷取全世界新聞內文</li>
+                    <li>自動擷取網頁架構</li>
+                    <li>由新聞稿蒐集商業資訊</li>
+                </ul>
+            </div>
+          </div>
+
+          <div class = 'contentPage'>
+            <div  class = "contentHolder" >
+                <h6>Glenbrook 驕傲地提供包含財富雜誌一百強與新創企業在內的客戶客製化資料服務。此類服務的幾種類型，詳述如下。</h6>
+                <div id='langaugeconversion' class = 'contentPageInner'>
+                    <h5>多語言轉譯商業紀錄</h5>
+                    <p>跨國企業每日思索如何維護既有與潛在顧客紀錄。這些紀錄係來自第三方（如D&B），或由企業自身的業務或行銷部門產生。運用這些紀錄的難度在於，它們時常以不同語言構成，部門間的協調亦不容易。不只語言不同，語言間描述顧客資料的準則也不同。例如：地址在中文裡的表述方式和英文正好相反。</p>
+
+                    <p>Glenbrook發展出了特殊方法來面對此項挑戰。結合紀錄分析、多語言轉譯技術，並根據網路上目標國家的郵遞慣例、公司資訊來核對數據。</p>
+                </div>
+                <div id='business' class = 'contentPageInner' >
+                    <h5>蒐集全球商業資訊</h5>
+                    <p>企業總想獲得關於現有及潛在顧客的最準確、即時資訊。網路是此類資訊最重要來源之一。公司的網站是這類資訊極佳來源，但只有百分之二的企業相關內容在他們自己的網站上，其餘百分之九十八則分布網路各處（新聞稿、文章、部落格等等）。更甚者，只有一小部分位於網路上的網頁是在表層網路（可透過搜尋引擎到達的網域），其他則位於暗網。更困難的是，所要尋找的資訊很少在網頁裡結構化呈現（多數情況下，他們是未經整理的文字）。Glenbrook的平台最適用於蒐集關於企業的數據資訊，並有能力通行於暗網、分析網頁、擷取內容架構，並將半結構性與非結構性資訊，轉化為可儲存於資料庫的結構性數據。</p>
+                </div>
+                <div id='poi' class = 'contentPageInner'>
+                    <h5>興趣點</h5>
+                    <p>隨著以地理位置服務開發的行動應用程式日益風行，愈來愈多公司希望提供使用者關於在地公司行號、景點等的詳盡資訊。網際網路是這些「興趣點」資訊的豐富來源。Glenbrook憑藉其匯集分析大量網路資料的能力，蒐集並更新興趣點資訊。</p>
+                </div>
+            </div>
+          </div>
+          <div class = 'contentPage'></div>
+          <div id='contact' class = 'contentPage'>
+            <div  class = "contentHolder" >
+                <p>如果您有任何關於Glenbrook資料服務的問題，歡迎來信至<br>
+                <a class = "contactAddress" href="mailto:sales@glenbrooknet.com" target="_top">
+                sales@glenbrooknet.com</a></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <!-- /.container -->
+
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+  </body>
+</html>
